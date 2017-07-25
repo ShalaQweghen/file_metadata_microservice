@@ -42,8 +42,7 @@ app.route('/')
     });
 
 app.post("/get-file-size", upload.single("file"), function(req, res, next) {
-  var size = req.file.size;
-  res.json({"size": size});
+  res.json({"size": req.file.size});
 });
 
 // Respond not found to all the wrong routes
